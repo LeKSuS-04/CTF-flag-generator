@@ -164,7 +164,7 @@ def modify(string):
             if len(ALWAYSCHANGE[letters[i]]) < 1:
                 raise ValueError(f'No matches for letter {letters[i]} in AlwaysChange section of configuration file')
             else:
-                variants = ALWAYSCHANGE[letters[i]]
+                variants = ALWAYSCHANGE[letters[i]].copy()
                 new_letters = random.choice(variants)
                 del letters[i]
                 
@@ -175,7 +175,7 @@ def modify(string):
             if len(SOMETIMESCHANGE[letters[i]]) < 1:
                 raise ValueError(f'No matches for letter {letters[i]} in SometimesChange section of configuration file')
             else:
-                variants = SOMETIMESCHANGE[letters[i]]
+                variants = SOMETIMESCHANGE[letters[i]].copy()
                 variants.append(letters[i])
                 letters[i] = random.choice(variants)
         
