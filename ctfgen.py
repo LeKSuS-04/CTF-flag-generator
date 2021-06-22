@@ -7,6 +7,7 @@ import sys
 import random
 
 CONFIGFILENAME = 'config.json'
+CONFIGFILEPATH = "/".join(os.path.realpath(__file__).split('/')[:-1]) + '/'
 OUTPUTTOFILE = False
 OUTPUTFILENAME = ''
 
@@ -120,7 +121,7 @@ Command list:
     exit                                    Exit interactive mode;
 '''
 
-def read_config(file = CONFIGFILENAME):
+def read_config(file = CONFIGFILEPATH + CONFIGFILENAME):
     global PREFIX, POSTFIX, ALWAYSCHANGE, SOMETIMESCHANGE, CHANGECASE, SETCASE
     with open(file, 'r') as f:
         try:
