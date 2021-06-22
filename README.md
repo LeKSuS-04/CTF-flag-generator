@@ -1,4 +1,4 @@
-# CTF flag generator
+# :triangular_flag_on_post: CTF flag generator
 
 ### Flexible tool for generating flags for CTFs
 ### Usage: 
