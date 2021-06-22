@@ -1,6 +1,6 @@
 # CTF flag generator
 
-### Flexible tool for generation flags for CTFs
+### Flexible tool for generating flags for CTFs
 ### Usage: 
     ctfgen [options] [flags]
     * You can provide multiple flags;
